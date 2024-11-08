@@ -19,3 +19,11 @@ function enqueue_custom_styles() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
+// Ajout - Scripts (Modales Accueil)
+function enqueue_custom_scripts() {
+    wp_enqueue_script('modal-scripts-index', get_template_directory_uri() . '/js/modal-scripts.js', array('jquery'), '1.0', true);
+
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+?>
