@@ -59,7 +59,7 @@
                 'container'      => false
             ]);
             ?>
-
+             <?php include get_template_directory() . '/template-parts/modal.php'; ?>  <!-- Inclut un fichier externe de modal de contact -->
         </nav>
     </header>
 </body>
