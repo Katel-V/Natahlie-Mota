@@ -19,7 +19,7 @@
     ?>
     <a href="<?php echo esc_url($post_permalink); ?>">
         <div class="hero-image" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/titre-accueil.png" alt="Titre Accueil">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/titre-accueil.webp" alt="Titre Accueil">
         </div>
     </a>
     <?php endwhile; ?>
@@ -27,10 +27,10 @@
     <?php wp_reset_postdata(); // Réinitialiser - Données de publication à leur état d'origine ?>
 </div>
 
-<!-- Section | Filtres -->
+<!-- Section - Filtres -->
 <div class="filters-and-sort">
 
-    <!-- Filtre | Categorie -->
+    <!-- Filtre - Categorie -->
     <label for="category-filter"></label>
     <select name="category-filter" id="category-filter">
         <option value="ALL">CATÉGORIE</option>
@@ -42,7 +42,7 @@
         ?>
     </select>
 
-    <!-- Filtre | Format -->
+    <!-- Filtre - Format -->
     <label for="format-filter"></label>
     <select name="format-filter" id="format-filter">
         <option value="ALL">FORMAT</option>
@@ -54,7 +54,7 @@
         ?>
     </select>
 
-    <!-- Filtre | Trier par date -->
+    <!-- Filtre - Trier par date -->
     <label for="date-sort"></label>
     <select name="date-sort" id="date-sort">
         <option value="ALL">TRIER PAR</option>
@@ -63,7 +63,7 @@
     </select>
 </div>
 
-<!-- Section | Bloc de photos -->
+<!-- Section - Bloc de photos -->
 <div id="photo-container">
     <?php include get_template_directory() . '/template-parts/photo_block.php'; ?>
 </div>
