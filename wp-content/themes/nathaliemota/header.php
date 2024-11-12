@@ -38,21 +38,7 @@
         </div>
 
         <nav class="header-menu">  <!-- Menu de navigation -->
-            <div class="close-button-container">
-                <!-- Conteneur du logo -->
-                <div class="logo-container">
-                    <?php
-                    $custom_logo_id = get_theme_mod('custom_logo');
-                    $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
-                    ?>
-                    <a href="<?php echo home_url(); ?>">
-                        <img src="http://nathalie-mota.local/wp-content/uploads/2024/11/Logo.webp" alt="Logo">
-                    </a>
-                </div>
-                <button id="close-fullscreen-menu-button" class="close-button">X</button>
-            </div>
             <?php
-
             // Affiche | Menu de navigation en utilisant un emplacement de thème nommé 'main-menu'
             wp_nav_menu([
                 'theme_location' => 'main-menu',

@@ -1,0 +1,440 @@
+/* INFORMATION PHOTO - PHOTO - IMAGES LIÉES - BOUTONS MODALE - NAVIGATION ENTRE LES PHOTOS */
+
+/* Zone de contenu et la zone de contact */
+.zone-contenu, .zone-contact {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1126px;
+    margin: 0 auto;
+}
+
+/* Bouton myBtn-photo */
+#myBtn-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 232px;
+    height: 50px;
+    border-radius: 2px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    font-family: Space Mono;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17.77px;
+    letter-spacing: 0em;
+    text-align: center;
+    border: none;
+    background-color: #D8D8D8;
+    color: #000000;
+    text-decoration: none;
+}
+
+#myBtn-photo:hover {background-color: #cccaca;}
+
+/* Modale photo */
+.modal-photo {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.822);
+    overflow: auto;
+}
+
+/* Contenu de la modale photo */
+.modal-content-photo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    background-color: #fff;
+    padding: 20px;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.8s;
+    animation-name: animatetop;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+}
+
+/* Bouton de fermeture de la modale photo */
+.close-photo {
+    font-family: "Space Mono", monospace;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-photo:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close-photo:hover {
+    text-decoration: underline;
+}
+
+/* Modale en version mobile */
+@media (max-width: 768px) {
+    .modal-content-photo {
+        max-width: 95%;
+    }
+    .left-contact {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+    .left-contact .texte-contact,
+    .left-contact div {
+        width: 100%;
+    }
+    .zone-contact {
+        justify-content: center;
+    }
+}
+
+/* Texte de contact */
+.texte-contact p {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+/* Partie gauche de la page */
+.left-container, .left-contact {
+    align-content: center;
+    flex: 1;
+    position: relative;
+    max-width: 49%;
+    height: auto;
+}
+
+/* Bordure basse de la partie gauche */
+.left-container, .zone-contact {border-bottom: 2px solid #000;}
+
+/* Partie de contact à gauche */
+.left-contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+/* Titre dans la partie gauche */
+.left-container h1 {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 66px;
+    line-height: 58px;
+    text-transform: uppercase;
+}
+
+/* Paragraphe dans la partie gauche */
+.left-container p {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20.73px;
+    letter-spacing: 10%;
+    text-transform: uppercase;
+}
+
+/* Partie droite de la page et photos */
+.right-container, .photo {
+    flex: 1;
+    position: relative;
+    max-width: 50%;
+    height: auto;
+}
+
+/* Partie droite en version mobile */
+.right-container.mobile-first {order: -1;}
+
+/* Image à l'intérieur de la partie photo */
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+    .zone-contenu,
+    .zone-contact,
+    .left-container,
+    .right-container {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .left-container h1 {
+        font-size: 44px;
+    }
+
+    .zone-contenu.mobile-first {
+        flex-direction: column-reverse;
+    }
+
+    .right-container .photo img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .left-contact {
+        flex-direction: column;
+        align-items: center;
+        max-width: 65%;
+    }
+
+    .left-contact .texte-contact,
+    .left-contact div {
+        width: 100%;
+    }
+}
+
+/* Écrans larges */
+@media (min-width: 1024px) {
+    .left-container {
+        padding-top: 52vh;
+    }
+
+    .right-container {
+        margin-left: 20px;
+    }
+}
+
+/* Flèches de navigation */
+@media (max-width: 768px) {
+    .right-contact,
+    .prev-photo,
+    .next-photo {
+      display: none;
+    }
+}
+
+/* Conteneurs dans la partie de contact à droite */
+.right-contact > div {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0 30px 10px;
+}
+
+/* Flèches d'images */
+.arrow-img {
+    width: 33px;
+    height: 10px;
+    margin: 0 5px; 
+    vertical-align: middle;
+}
+
+/* Flèches d'images gauche et droite au survol */
+.arrow-img-gauche,
+.arrow-img-droite {
+    transition: transform 0.2s ease;
+}
+
+.arrow-img-gauche:hover,
+.arrow-img-droite:hover {
+    transform: scale(1.2);
+}
+
+/* Conteneur des miniatures */
+.thumbnail-container {
+    text-align: center; 
+    width: 80px;
+    height: 80px; 
+}
+
+/* Images des miniatures */
+.thumbnail-container img {
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+/* Image de la flèche gauche des miniatures */
+.thumbnail-container img.arrow-img-gauche {
+    display: block;
+    margin-right: 7px;
+    margin-top: 10px;
+}
+
+/* Image de la flèche droite des miniatures */
+.thumbnail-container img.arrow-img-droite {
+    display: block;
+    margin-top: -8px;
+    margin-left: 54px;
+}
+
+/* Section des images liées */
+.related-images {
+    max-width: 1126px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Titre de la section des images liées */
+.related-images h3 {
+    font-family: 'Space Mono', sans-serif;
+    font-size: 18px; 
+    font-weight: 400;
+    line-height: 26.66px;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+
+/* Conteneurs des images liées */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; 
+}
+
+/* Conteneurs des images liées individuelles */
+.related-image {
+    flex: 1;
+    margin-right: 10px;
+    text-align: center;
+}
+
+/* Images à l'intérieur des conteneurs d'images liées */
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100%;
+}
+
+/* Images à l'intérieur des conteneurs d'images liées */
+.image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ecrans de largeur inférieure à 768 pixels */
+
+@media (max-width: 768px) {
+    /* Modifier la mise en page des conteneurs d'images en une seule colonne */
+    .image-container {
+        display: block;
+    }
+
+    /* Ajuster la largeur et l'espacement des images associées individuelles */
+    .related-image {
+        flex: 1; /* Pleine largeur - une seule colonne */
+        margin-right: 0; /* Supprimer la marge droite pour l'espacement */
+        margin-bottom: 10px; /* Ajouter une marge inférieure pour l'espacement */
+    }
+
+}
+
+/* Conteneur du bouton de la page d'accueil */
+.home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 20px;
+}
+
+/* Bouton de la page d'accueil */
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 272px;
+    height: 50px;
+    background-color: #D8D8D8;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    font-family: Space Mono;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17.77px;
+    letter-spacing: 0em;
+    text-align: center;
+    border: none;
+}
+
+.button:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+/* Superposition et Icônes */
+.thumbnail-overlay-single {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
+    text-align: center;
+}
+
+.thumbnail-overlay-single:hover {opacity: 1;}
+
+.photo-info {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.photo-info-left, .photo-info-right {width: 60%;}
+
+.thumbnail-overlay-single img {
+    width: 46px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fullscreen-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+}
+  
+  
