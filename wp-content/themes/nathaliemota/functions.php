@@ -38,6 +38,12 @@ function enqueue_infinite_pagination_js() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_infinite_pagination_js');
 
+// Ajouter de FontAwesome
+function enqueue_font_awesome() {
+    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'); 
+}
+add_action('wp_enqueue_scripts', 'enqueue_font_awesome');
+
 // Création de la fonction pour charger des articles - Photo
 
 function load_more_posts() {
