@@ -1,6 +1,8 @@
+<!-- PAGE ACCUEIL -->
+
 <?php get_header(); ?>
 
-<!-- Section | Image d'en-tête (Hero Image) -->
+<!-- Section Hero Image -->
 <div class="hero">
     <?php
     // Interrogation - Sélection d'une photo aléatoire de la même catégorie
@@ -12,7 +14,7 @@
 
     $related_photos_query = new WP_Query($args_related_photos);
 
-    // Boucle - Parcourir les résultats de la requête
+    // Boucle Parcourir les résultats de la requête
     while ($related_photos_query->have_posts()) :
         $related_photos_query->the_post();
         $post_permalink = get_permalink(); // Lien permanent de la publication actuelle
@@ -24,13 +26,13 @@
     </a>
     <?php endwhile; ?>
 
-    <?php wp_reset_postdata(); // Réinitialiser - Données de publication à leur état d'origine ?>
+    <?php wp_reset_postdata(); ?>  <!-- Réinitialise les données de publication à leur état d'origine -->
 </div>
 
-<!-- Section - Filtres -->
+<!-- Section  Filtres -->
 <div class="filters-and-sort">
 
-    <!-- Filtre - Categorie -->
+    <!-- Filtre  Categorie -->
     <label for="category-filter"></label>
     <select name="category-filter" id="category-filter">
         <option value="ALL">CATÉGORIE</option>
@@ -42,7 +44,7 @@
         ?>
     </select>
 
-    <!-- Filtre - Format -->
+    <!-- Filtre  Format -->
     <label for="format-filter"></label>
     <select name="format-filter" id="format-filter">
         <option value="ALL">FORMAT</option>
@@ -54,7 +56,7 @@
         ?>
     </select>
 
-    <!-- Filtre - Trier par date -->
+    <!-- Filtre  Trier par date -->
     <label for="date-sort"></label>
     <select name="date-sort" id="date-sort">
         <option value="ALL">TRIER PAR</option>
@@ -63,7 +65,7 @@
     </select>
 </div>
 
-<!-- Section - Bloc de photos -->
+<!-- Section  Bloc de photos -->
 <div id="photo-container">
     <?php include get_template_directory() . '/template-parts/photo_block.php'; ?>
 </div>

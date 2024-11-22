@@ -1,3 +1,5 @@
+<!-- Page blog -->
+
 <?php get_header(); ?>
 
 <main class="main-content-post">
@@ -9,7 +11,7 @@
     <div class="post">
     <h1 class="post-title"><?php the_title(); ?></h1>
         <div>
-            <?php the_content(); // Affiche le contenu de l'article. ?>
+            <?php the_content(); ?>  <!-- Affiche le contenu de l'article -->
         </div>
     <?php
         endwhile;

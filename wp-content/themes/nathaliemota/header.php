@@ -31,13 +31,15 @@
             </a>
         </div>
 
-        <div class="mobile-menu-button" id="open-fullscreen-menu-button">  <!--Menu mobile -->
+        <!--Menu mobile -->
+        <div class="mobile-menu-button" id="open-fullscreen-menu-button">  
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
 
-        <nav class="header-menu">  <!-- Menu de navigation -->
+        <!-- Menu de navigation -->
+        <nav class="header-menu">  
             <?php
             // Affiche | Menu de navigation en utilisant un emplacement de thème nommé 'main-menu'
             wp_nav_menu([

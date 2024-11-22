@@ -1,33 +1,33 @@
 <?php
 
-// Enregistrement - Menu Principal
+// Enregistrement du Menu Principal
 function register_my_menu() {
     register_nav_menu( 'main-menu', __( 'Menu principal', 'text-domain' ) );
 }
 add_action( 'after_setup_theme', 'register_my_menu' );
 
-// Enregistrement - Menu pied de page
+// Enregistrement du Menu pied de page
 function register_footer_menu() {
     register_nav_menu( 'footer-menu', __( 'Menu du pied de page', 'text-domain' ) );
 }
 add_action( 'after_setup_theme', 'register_footer_menu' );
 
-// Ajout - Styles 
+// Ajout des Styles 
 function enqueue_custom_styles() {
     wp_enqueue_style('custom-theme-css', get_template_directory_uri() . '/css/theme.css', array(), '1.0', 'all');
-    wp_enqueue_style('custom-single_photo-css', get_template_directory_uri() . '/css/single_photo.css', array(), '1.0', 'all');
+    wp_enqueue_style('custom-single-photo-css', get_template_directory_uri() . '/css/single-photo.css', array(), '1.0', 'all');
     wp_enqueue_style('custom-index-css', get_template_directory_uri() . '/css/index.css', array(), '1.0', 'all');
-    wp_enqueue_style('custom-photoblock-css', get_template_directory_uri() . '/css/photo_block.css', array(), '1.0', 'all');
-    wp_enqueue_style('lightbox-single_photo', get_template_directory_uri() . '/css/lightbox-single_photo.css', array(), '1.0', 'all');
+    wp_enqueue_style('custom-photoblock-css', get_template_directory_uri() . '/css/photo-block.css', array(), '1.0', 'all');
+    wp_enqueue_style('lightbox-single-photo', get_template_directory_uri() . '/css/lightbox-single-photo.css', array(), '1.0', 'all');
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
-// Ajout - Scripts 
+// Ajout des Scripts 
 function enqueue_custom_scripts() {
-    //wp_enqueue_script('header-scripts', get_template_directory_uri() . '/js/header-scripts.js', array('jquery'), '1.1.1', true);
+    wp_enqueue_script('header-scripts', get_template_directory_uri() . '/js/header-scripts.js', array('jquery'), '1.1.1', true);
     wp_enqueue_script('modal-scripts', get_template_directory_uri() . '/js/modal-scripts.js', array('jquery'), '1.0', true);
-    wp_enqueue_script('modal_photo-scripts', get_template_directory_uri() . '/js/modal_photo-scripts.js', array('jquery'), '1.0', true);
-    wp_enqueue_script('lightbox-single_photo', get_template_directory_uri() . '/js/lightbox-single_photo.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('modal-photo-scripts', get_template_directory_uri() . '/js/modal-photo-scripts.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('lightbox-single-photo', get_template_directory_uri() . '/js/lightbox-single-photo.js', array('jquery'), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
@@ -38,7 +38,7 @@ function enqueue_infinite_pagination_js() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_infinite_pagination_js');
 
-// Créer une fonction pour charger des articles - Photo
+// Création de la fonction pour charger des articles - Photo
 
 function load_more_posts() {
     $page = $_GET['page']; // Récupère le numéro de page à charger à partir de la requête GET
@@ -119,10 +119,10 @@ function load_more_posts() {
                                 <!-- Section | Overlay Catalogue -->
                                 <div class="thumbnail-overlay">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_eye.webp" alt="Icône de l'œil"> <!-- Icône de l'œil | Information Photo -->
-                                    <i class="fas fa-expand-arrows-alt fullscreen-icon"></i><!-- Icône de plein écran -->
+                                    <i class="fa-light fa-expand-alt fullscreen-icon"></i><!-- Icône de plein écran -->
                                     <?php
                                     // Récupère la référence et la catégorie de l'image associée
-                                    $related_reference_photo = get_field('reference_photo');
+                                    $related_reference_photo = get_field('reference');
                                     $related_categories = get_the_terms(get_the_ID(), 'categorie');
                                     $related_category_names = array();
 
@@ -156,6 +156,7 @@ function load_more_posts() {
     die();
 }
 
+// AJAX
 add_action('wp_ajax_load_more_posts', 'load_more_posts'); // Associe la fonction 'load_more_posts' à l'action AJAX 'wp_ajax_load_more_posts'
 add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts'); // Associe la fonction 'load_more_posts' à l'action AJAX 'wp_ajax_nopriv_load_more_posts'
 

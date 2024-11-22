@@ -1,11 +1,11 @@
-/* Image hero */ 
+/* IMAGE HERO - PAGE ACCUEIL */ 
 
 .hero {
     position: relative;
     height: 782px;
 }
 
-/* Style - Hero Image */
+/* Hero Image */
 .hero-image {
     background-size: cover;
     background-position: center;
@@ -14,7 +14,7 @@
     background-image: url('/assets/images/fallback-hero.webp'); /* Image de secours */
 }
 
-/* Style - Titre de l'Image */
+/* Titre de l'Image */
 .hero-image img {
     position: absolute;
     top: 50%;
@@ -24,7 +24,7 @@
     height: auto;
 }
 
-/* Styles - Mobile - Hero Image */
+/* MEDIA */
 @media screen and (max-width: 768px) {
     .hero {
         height: 400px; /* Hauteur - Mobiles */
