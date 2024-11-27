@@ -1,3 +1,5 @@
+/* EN-TETE - PIED DE PAGE - MODALE - WPCF7 */
+
 /* GENERAL */
 body {
     margin-top: 90px;
@@ -20,20 +22,24 @@ header {
     z-index: 1000;
 }
 
+/* Logo en-tête */
 .header-logo img {max-width: 300px;}
 
+/* Conteneur du logo */
 .logo-container img {
     padding-left: 21px;
     padding-top: 35px;
     width: 212px;
 }
 
+/* Menu en-tete */
 .header-menu {
     display: flex;
     align-items: center;
     padding: 0;
 }
 
+/* Liens du Menu de l'En-Tête et du Pied de Page */
 .header-menu li a, .footer-menu li a, #open-modal-button-header, .close {
     text-decoration: none;
     color: #000;
@@ -61,6 +67,7 @@ header {
     cursor: pointer;
 }
 
+/* Survole bouton de fermeture */
 .close:hover, .close-button:hover {text-decoration: underline;}
 
 /* FOOTER */
