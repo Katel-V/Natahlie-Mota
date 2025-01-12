@@ -1,0 +1,39 @@
+/* 
+   Nom du fichier : styles.css
+   Auteur : Lady Quintero
+   Date de création : Septembre - Octobre 2023
+   Description : Ce fichier CSS définit les styles pour la page d'accueil du site.
+*/
+
+/* IMAGE HERO - ACCUEIL */
+/* Style | Conteneur Hero Image */
+.hero {
+    position: relative;
+    height: 782px;
+}
+
+/* Style | Hero Image */
+.hero-image {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+    background-image: url('/assets/images/fallback-hero.png'); /* Image de secours */
+}
+
+/* Style | Titre de l'Image */
+.hero-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styles | Mobile - Hero Image */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 400px; /* Hauteur - Mobiles */
+    }
+}
