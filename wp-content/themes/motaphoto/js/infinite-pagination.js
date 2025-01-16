@@ -1,11 +1,5 @@
-/* 
-   Nom du fichier : infinite-pagination.js
-   Auteur : Lady Quintero
-   Date de création : Septembre - Octobre 2023
-   Description : Ce script gère le chargement de plus de publications (photos) 
-   ainsi que l'application de filtres sur la page, à partir du fichier functions.php.
-*/
 // CHARGER PLUS (PHOTOS) + FILTRES (FUNCTIONS.PHP)
+
 let loading = false; // Indique si le chargement est en cours ou non
 const $loadMoreButton = $('#load-more-posts'); // Sélectionne le bouton "Charger plus"
 const $container = $('.thumbnail-container-accueil'); // Sélectionne le conteneur de vignettes
@@ -18,11 +12,11 @@ function get_more_posts(load) {
     let inputPage = $('input[name="page"]');
     let page = parseInt(inputPage.val());
     page = load ? page + 1 : 1; // Incrémente le numéro de page si "load" est vrai, sinon réinitialise à 1.
-    const category = $('select[name="category-filter"]').val();
-    const format = $('select[name="format-filter"]').val();
-    const dateSort = $('select[name="date-sort"]').val();
+    const category = $("#categorie").val();
+    const format = $("#format").val();
+    const years = $("#annees").val();
 
-    console.log(category, format, dateSort, page);
+    console.log(category, format, years, page);
 
     $.ajax({
         type: 'GET',
@@ -32,7 +26,7 @@ function get_more_posts(load) {
             page,
             category,
             format,
-            dateSort
+            years
         },
         success: function (response) {
             if (response) {
@@ -66,14 +60,14 @@ function recursive_change(selectId) {
     });
 }
 
-if ($('#category-filter').length) {
-    recursive_change('category-filter'); // Applique la fonction de changement aux filtres de catégorie
+if ($('#categorie').length) {
+    recursive_change('categorie'); // Applique la fonction de changement aux filtres de catégorie
 }
 
-if ($('#format-filter').length) {
-    recursive_change('format-filter'); // Applique la fonction de changement aux filtres de format
+if ($('#format').length) {
+    recursive_change('format'); // Applique la fonction de changement aux filtres de format
 }
 
-if ($('#date-sort').length) {
-    recursive_change('date-sort'); // Applique la fonction de changement aux filtres de tri par date
+if ($('#annees').length) {
+    recursive_change('annees'); // Applique la fonction de changement aux filtres de tri par date
 }

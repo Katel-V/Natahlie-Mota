@@ -1,17 +1,12 @@
-/* 
-   Nom du fichier : theme.css
-   Auteur : Lady Quintero
-   Date de création : Septembre - Octobre 2023
-   Description : Ce fichier CSS définit les styles pour les parties globales du site.
-*/
 /* EN-TÊTE - PIED DE PAGE - MODALES - FORMULAIRE DE CONTACT 7 */
-/* Styles | Global */
+
+/* Styles - Global */
 body {
     margin-top: 90px;
     background-color: #FFFFFF;
 }
 
-/* Styles | En-Tête */
+/* Styles - En-Tête */
 header {
     position: fixed;
     top: 0;
@@ -26,12 +21,12 @@ header {
     z-index: 1000;
 }
 
-/* Styles | Logo de l'En-Tête */
+/* Styles - Logo de l'En-Tête */
 .header-logo img {
     max-width: 300px;
 }
 
-/* Styles | Conteneur de Logo */
+/* Styles - Conteneur de Logo */
 .logo-container img {
     padding-left: 21px;
     padding-top: 35px;
@@ -45,7 +40,7 @@ header {
     padding: 0;
 }
 
-/* Styles | Liens du Menu de l'En-Tête et du Pied de Page */
+/* Styles - Liens du Menu de l'En-Tête et du Pied de Page */
 .header-menu li a,
 .footer-menu li a,
 #open-modal-button-header,
@@ -60,7 +55,7 @@ header {
     text-align: left;
 }
 
-/* Styles | Listes du Menu de l'En-Tête et du Pied de Page */
+/* Styles - Listes du Menu de l'En-Tête et du Pied de Page */
 .header-menu ul,
 .footer-menu ul {
     list-style: none;
@@ -69,14 +64,14 @@ header {
     display: flex;
 }
 
-/* Styles | Éléments de Liste du Menu de l'En-Tête et du Pied de Page */
+/* Styles - Éléments de Liste du Menu de l'En-Tête et du Pied de Page */
 
 .header-menu li,
 .footer-menu li {
     margin-right: 20px;
 }
 
-/* Styles | Styles de Boutons de l'En-Tête et du Pied de Page */
+/* Styles - Styles de Boutons de l'En-Tête et du Pied de Page */
 #open-modal-button-header,
 #open-modal-button-footer {
     background-color: transparent;
@@ -85,7 +80,7 @@ header {
     cursor: pointer;
 }
 
-/* Styles | Styles de Survole pour Boutons et Liens */
+/* Styles - Styles de Survole pour Boutons et Liens */
 #open-modal-button-header:hover,
 .header-menu li a:hover,
 .footer-menu a:hover {
@@ -94,13 +89,13 @@ header {
     font-weight: 700;
 }
 
-/* Styles | Styles de Survole pour Boutons de Fermeture */
+/* Styles - Styles de Survole pour Boutons de Fermeture */
 .close:hover,
 .close-button:hover {
     text-decoration: underline;
 }
 
-/* Styles | PIED DE PAGE */
+/* Styles - PIED DE PAGE */
 .footer-menu {
     text-align: center;
     margin-top: 20px;
@@ -111,19 +106,19 @@ header {
     padding-top: 10px;
 }
 
-/* Styles | Éléments de Liste du Menu du Pied de Page */
+/* Styles - Éléments de Liste du Menu du Pied de Page */
 .footer-menu li {
     margin: 0 15px;
     display: inline;
 }
 
-/* Styles | Liens du Menu du Pied de Page */
+/* Styles - Liens du Menu du Pied de Page */
 .footer-menu a {
     text-decoration: none;
     padding-top: 5px;
 }
 
-/* Styles | MOBILE - PIED DE PAGE */
+/* Styles - MOBILE - PIED DE PAGE */
 @media screen and (max-width: 767px) {
     .footer-menu {
         display: flex;
@@ -148,7 +143,7 @@ header {
 
 
 
-/* Styles | Animation de Modale */
+/* Styles - Animation de Modale */
 @-webkit-keyframes animatetop {
     from {
         top: 0;
@@ -173,7 +168,7 @@ header {
     }
 }
 
-/* Styles | MODALE */
+/* Styles - MODALE */
 .modal {
     display: none;
     position: fixed;
@@ -186,7 +181,7 @@ header {
     overflow: auto;
 }
 
-/* Styles | CONTENU DE LA MODALE */
+/* Styles - CONTENU DE LA MODALE */
 .modal-content {
     position: fixed;
     top: 50%;
@@ -204,7 +199,7 @@ header {
     animation-timing-function: ease;
 }
 
-/* Styles | Image dans la Modale - Bannière */
+/* Styles - Image dans la Modale - Bannière */
 .modal-content img {
     display: block;
     width: 100%;
@@ -214,7 +209,7 @@ header {
     margin-right: auto;
 }
 
-/* Styles | Styles de Boutons de Fermeture */
+/* Styles - Styles de Boutons de Fermeture */
 .close {
     position: absolute;
     top: 20px;
@@ -229,7 +224,7 @@ header {
     cursor: pointer;
 }
 
-/* Styles | MOBILE - MODALE */
+/* Styles - MOBILE - MODALE */
 @media (max-width: 768px) {
     .modal-content {
         max-width: 95%;
@@ -238,7 +233,7 @@ header {
     }
 }
 
-/* Styles | Contact Form 7 */
+/* Styles - Contact Form 7 */
 form {
     display: flex;
     flex-direction: column;
@@ -247,7 +242,7 @@ form {
     margin: 0 auto;
 }
 
-/* Styles | Styles des Entrées du Contact Form 7 */
+/* Styles - Styles des Entrées du Contact Form 7 */
 input[type=email],
 input[type=text],
 select,
@@ -256,7 +251,7 @@ textarea {
     border-radius: 7px;
 }
 
-/* Styles | Styles du Bouton Soumettre du Contact Form 7 */
+/* Styles - Styles du Bouton Soumettre du Contact Form 7 */
 input[type=submit] {
     display: block;
     width: 263px;
@@ -277,17 +272,17 @@ input[type=submit] {
     color: #000000;
 }
 
-/* Styles | Styles de Survole du Bouton Soumettre du Contact Form 7 */
+/* Styles - Styles de Survole du Bouton Soumettre du Contact Form 7 */
 input[type=submit]:hover {
     background-color: #cccaca;
 }
 
-/* Styles | Messages d'Erreur du Contact Form 7 */
+/* Styles - Messages d'Erreur du Contact Form 7 */
 .wpcf7-not-valid-tip {
     color: #B8BBC2;
 }
 
-/* Styles | Styles de Sortie de Réponse du Contact Form 7 */
+/* Styles - Styles de Sortie de Réponse du Contact Form 7 */
 .wpcf7 form.invalid .wpcf7-response-output,
 .wpcf7 form.unaccepted .wpcf7-response-output,
 .wpcf7 form.payment-required .wpcf7-response-output,
@@ -299,7 +294,7 @@ input[type=submit]:hover {
     border: none;
 }
 
-/* Styles | Étiquettes pour le Contact Form 7 */
+/* Styles - Étiquettes pour le Contact Form 7 */
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
 .wpcf7 textarea {
@@ -311,7 +306,7 @@ input[type=submit]:hover {
     padding: 5px 10px;
 }
 
-/* Styles | Styles d'Étiquettes pour le Contact Form 7 */
+/* Styles - Styles d'Étiquettes pour le Contact Form 7 */
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
 .wpcf7 textarea,
@@ -324,12 +319,12 @@ input[type=submit]:hover {
     text-align: left;
 }
 
-/* Styles | Style d'Étiquette de Message pour le Contact Form 7 */
+/* Styles - Style d'Étiquette de Message pour le Contact Form 7 */
 .wpcf7 textarea[name="your-message"] {
     height: 190px;
 }
 
-/* Styles | MOBILE - BOUTON BURGER */
+/* Styles - MOBILE - BOUTON BURGER */
 .mobile-menu-button {
     display: none;
     cursor: pointer;
@@ -345,7 +340,7 @@ input[type=submit]:hover {
     transition: 0.4s;
 }
 
-/* Styles | MOBILE - MENU */
+/* Styles - MOBILE - MENU */
 @media (max-width: 768px) {
     .mobile-menu-button {
         display: block;

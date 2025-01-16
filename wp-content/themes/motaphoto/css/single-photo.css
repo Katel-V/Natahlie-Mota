@@ -1,12 +1,6 @@
-/* 
-   Nom du fichier : single-photo.css
-   Auteur : Lady Quintero
-   Date de création : Septembre - Octobre 2023
-   Description : Ce fichier CSS définit les styles pour la page de photo.
-*/
-
 /* INFORMATION PHOTO - PHOTO - IMAGES LIÉES - BOUTONS MODALE - NAVIGATION ENTRE LES PHOTOS */
-/* Styles | Zone de contenu et la zone de contact */
+
+/* Styles - Zone de contenu et la zone de contact */
 .zone-contenu,
 .zone-contact {
     display: flex;
@@ -15,7 +9,7 @@
     margin: 0 auto;
 }
 
-/* Styles | Bouton myBtn-photo */
+/* Styles - Bouton myBtn-photo */
 #myBtn-photo {
     display: flex;
     justify-content: center;
@@ -41,7 +35,7 @@
     background-color: #cccaca;
 }
 
-/* Styles | Modale photo */
+/* Styles - Modale photo */
 .modal-photo {
     display: none;
     position: fixed;
@@ -54,7 +48,7 @@
     overflow: auto;
 }
 
-/* Styles | Contenu de la modale photo */
+/* Styles - Contenu de la modale photo */
 .modal-content-photo {
     position: fixed;
     top: 50%;
@@ -72,7 +66,7 @@
     animation-timing-function: ease;
 }
 
-/* Styles | Bouton de fermeture de la modale photo */
+/* Styles - Bouton de fermeture de la modale photo */
 .close-photo {
     font-family: "Space Mono", monospace;
     position: absolute;
@@ -92,7 +86,7 @@
     text-decoration: underline;
 }
 
-/* Styles | Modale en version mobile */
+/* Styles - Modale en version mobile */
 @media (max-width: 768px) {
     .modal-content-photo {
         max-width: 95%;
@@ -114,7 +108,7 @@
     }
 }
 
-/* Styles | Texte de contact */
+/* Styles - Texte de contact */
 .texte-contact p {
     font-family: Poppins;
     font-weight: 300;
@@ -122,7 +116,7 @@
     line-height: 21px;
 }
 
-/* Styles | Partie gauche de la page */
+/* Styles - Partie gauche de la page */
 .left-container,
 .left-contact {
     align-content: center;
@@ -132,13 +126,13 @@
     height: auto;
 }
 
-/* Styles | Bordure basse de la partie gauche */
+/* Styles - Bordure basse de la partie gauche */
 .left-container,
 .zone-contact {
     border-bottom: 2px solid #000;
 }
 
-/* Styles | Partie de contact à gauche */
+/* Styles - Partie de contact à gauche */
 .left-contact {
     display: flex;
     flex-direction: row;
@@ -148,7 +142,7 @@
     padding-bottom: 30px;
 }
 
-/* Styles | Titre dans la partie gauche */
+/* Styles - Titre dans la partie gauche */
 .left-container h1 {
     font-family: 'Space Mono', monospace;
     font-weight: 400;
@@ -158,7 +152,7 @@
     text-transform: uppercase;
 }
 
-/* Styles | Paragraphe dans la partie gauche */
+/* Styles - Paragraphe dans la partie gauche */
 .left-container p {
     font-family: 'Space Mono', monospace;
     font-weight: 400;
@@ -168,7 +162,7 @@
     text-transform: uppercase;
 }
 
-/* Styles | Partie droite de la page et photos */
+/* Styles - Partie droite de la page et photos */
 .right-container,
 .photo {
     flex: 1;
@@ -177,19 +171,19 @@
     height: auto;
 }
 
-/* Styles | Partie droite en version mobile */
+/* Styles - Partie droite en version mobile */
 .right-container.mobile-first {
     order: -1;
 }
 
-/* Styles | Image à l'intérieur de la partie photo */
+/* Styles - Image à l'intérieur de la partie photo */
 .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Styles | Version mobile */
+/* Styles - Version mobile */
 @media (max-width: 768px) {
     .zone-contenu,
     .zone-contact,
@@ -226,7 +220,7 @@
     }
 }
 
-/* Styles | Écrans larges */
+/* Styles - Écrans larges */
 @media (min-width: 1024px) {
     .left-container {
         padding-top: 52vh;
@@ -237,7 +231,7 @@
     }
 }
 
-/* Styles | Flèches de navigation */
+/* Styles - Flèches de navigation */
 @media (max-width: 768px) {
     .right-contact,
     .prev-photo,
@@ -246,14 +240,14 @@
     }
 }
 
-/* Styles | Conteneurs dans la partie de contact à droite */
+/* Styles - Conteneurs dans la partie de contact à droite */
 .right-contact > div {
     display: inline-block;
     vertical-align: middle;
     margin: 10px 0 30px 10px;
 }
 
-/* Styles | Flèches d'images */
+/* Styles - Flèches d'images */
 .arrow-img {
     width: 33px;
     height: 10px;
@@ -261,7 +255,7 @@
     vertical-align: middle;
 }
 
-/* Styles | Flèches d'images gauche et droite au survol */
+/* Styles - Flèches d'images gauche et droite au survol */
 .arrow-img-gauche,
 .arrow-img-droite {
     transition: transform 0.2s ease;
@@ -272,34 +266,34 @@
     transform: scale(1.2);
 }
 
-/* Styles | Conteneur des miniatures */
+/* Styles - Conteneur des miniatures */
 .thumbnail-container {
     text-align: center; 
     width: 80px;
     height: 80px; 
 }
 
-/* Styles | Images des miniatures */
+/* Styles - Images des miniatures */
 .thumbnail-container img {
     max-width: 100%; 
     max-height: 100%;
 }
 
-/* Styles | Image de la flèche gauche des miniatures */
+/* Styles - Image de la flèche gauche des miniatures */
 .thumbnail-container img.arrow-img-gauche {
     display: block;
     margin-right: 7px;
     margin-top: 10px;
 }
 
-/* Styles | Image de la flèche droite des miniatures */
+/* Styles - Image de la flèche droite des miniatures */
 .thumbnail-container img.arrow-img-droite {
     display: block;
     margin-top: -8px;
     margin-left: 54px;
 }
 
-/* Styles | Section des images liées */
+/* Styles - Section des images liées */
 .related-images {
     max-width: 1126px;
     margin: 0 auto;
@@ -307,7 +301,7 @@
     padding: 20px;
 }
 
-/* Styles | Titre de la section des images liées */
+/* Styles - Titre de la section des images liées */
 .related-images h3 {
     font-family: 'Space Mono', sans-serif;
     font-size: 18px; 
@@ -317,28 +311,28 @@
     text-align: left;
 }
 
-/* Styles | Conteneurs des images liées */
+/* Styles - Conteneurs des images liées */
 .image-container {
     display: flex;
     justify-content: space-between;
     margin-top: 20px; 
 }
 
-/* Styles | Conteneurs des images liées individuelles */
+/* Styles - Conteneurs des images liées individuelles */
 .related-image {
     flex: 1;
     margin-right: 10px;
     text-align: center;
 }
 
-/* Styles | Images à l'intérieur des conteneurs d'images liées */
+/* Styles - Images à l'intérieur des conteneurs d'images liées */
 .image-wrapper {
     position: relative;
     overflow: hidden;
     padding-bottom: 100%;
 }
 
-/* Styles | Images à l'intérieur des conteneurs d'images liées */
+/* Styles - Images à l'intérieur des conteneurs d'images liées */
 .image-wrapper img {
     position: absolute;
     top: 0;
@@ -365,7 +359,7 @@
 
 }
 
-/* Styles | Conteneur du bouton de la page d'accueil */
+/* Styles - Conteneur du bouton de la page d'accueil */
 .home-button {
     display: flex;
     justify-content: center;
@@ -373,7 +367,7 @@
     margin-top: 20px;
 }
 
-/* Styles | Bouton de la page d'accueil */
+/* Styles - Bouton de la page d'accueil */
 .button {
     display: flex;
     justify-content: center;
@@ -401,7 +395,7 @@
     background-color: #000000;
 }
 
-/* Styles | Superposition et Icônes */
+/* Styles - Superposition et Icônes */
 .thumbnail-overlay-single {
     position: absolute;
     top: 0;

@@ -1,12 +1,6 @@
-/* 
-   Nom du fichier : lightbox-single-photo.css
-   Auteur : Lady Quintero
-   Date de création : Septembre - Octobre 2023
-   Description : Ce fichier CSS définit les styles pour la fonction de lightbox sur le site.
-*/
-
 /* LIGHTBOX - SINGLE PHOTO - NAVIGATION*/
-/* Styles | Lightbox */
+
+/* Styles - Lightbox */
 
 .btn-close {
   position: fixed;

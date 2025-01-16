@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
         },
         success: function (response) {
           // Mettez à jour la section des photos avec les résultats filtrés
-          $("#containerPhoto").html(response);
+          $("#photo-container").html(response);
         },
         //permet d'afficher les erreurs
         error: function (xhr, ajaxOptions, thrownError) {          
@@ -34,7 +34,7 @@ jQuery(document).ready(function ($) {
           // Si les valeurs sont les valeurs par défaut, relancer le conteneur photo
           if (isDefaultValues) {
             // Mettez à jour la section des photos avec le contenu par défaut
-            $("#containerPhoto").load(window.location.href + " #containerPhoto");
+            $("#photo-container").load(window.location.href + " #photo-container");
           }
         },
       });

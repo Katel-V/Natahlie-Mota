@@ -113,67 +113,7 @@
 }
 
 /* Filtres */
-/*.filters-and-sort {
-    max-width: 1126px;  
-    margin: 0 auto;  
-    text-align: center;  
-    padding-top: 40px; 
-    display: flex; 
-    justify-content: start;
-}
 
-.filters-and-sort label, .filters-and-sort select {
-    font-family: Poppins;  
-    font-size: 12px;  
-    font-weight: 500;  
-    line-height: 18px;  
-    letter-spacing: 0.03em;  
-    text-align: left;  
-    text-transform: uppercase;  
-}
-
-#category-filter{
-    margin-right: 42px;
-}
-
-#date-sort{
-    margin-left: 310px;
-}
-
-#category-filter,
-#format-filter,
-#date-sort{
-    width: 260px;  /* Largeur Filtres */
-/*   height: 42px;  /* Hauteur Filtres */
- /*   padding: 11px 18px 11px 18px;  /* Marge intérieure Filtres */
- /*   margin-bottom: 20px; 
-    border-radius: 8px;  /* Coins Filtres */
- /*   border: 1.3px solid #B8BBC2;  /* Bordure solide */
- /*   justify-content: space-between;
-}
-
-
-
-/* Media query - Filtres */
-/*@media (max-width: 768px) {
-    .filters-and-sort {
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 20px; 
-    }
-
-    #category-filter,
-    #format-filter,
-    #date-sort{
-        margin-bottom: 0; 
-}
-
-    #category-filter,
-    #date-sort{
-        margin: 10px 0;
-    }
-
-}*/
 /* Styles for screens smaller than 768px*/
 @media (max-width: 768px) {
     /* Supprime la disposition flex et ajuste la largeur des vignettes CPT individuelles. */
@@ -190,12 +130,14 @@
 
 /*Filtres */
 
-select{width: 260px;}
+select{width: 260px;font-size: 12px;}
 
 .select2-container--default .select2-selection--single{
-    height: 43px;
+    height: 53px;
     align-content: center;
 }
+/*#select2-categorie-container .select2-selection__rendered {height: 43px !important;}*/
+span.selection {height:43px !important;}
 
 .select2-selection__arrow {height: 43px !important;}
 
@@ -225,7 +167,7 @@ select{width: 260px;}
     border: 1.3px solid #b8bbc2 !important;
     border-radius: 8px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 12px;
     background-color: transparent;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -238,6 +180,7 @@ select{width: 260px;}
     display: flex;
     align-items: center;
     flex: 1;
+    
   }
   @media screen and (max-width: 770px) {
     .taxonomy-container {
